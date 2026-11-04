@@ -19,6 +19,7 @@
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
@@ -412,50 +413,76 @@
 <!-- ============================ REVIEWS ============================ -->
 <!-- PLACEHOLDER REVIEWS: sample text for design only. Replace with compliance-approved client reviews or remove. -->
 <section class="reviews section section--dark" id="reviews" aria-labelledby="reviews-title">
+  <span class="reviews__glow" aria-hidden="true"></span>
   <div class="container">
     <div class="reviews__head">
-      <h2 id="reviews-title"><span class="accent">Join the families</span> who plan with confidence.</h2>
-      <div class="reviews__rating" aria-label="Client reviews">
-        <span class="stars" aria-hidden="true">
-          <svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg>
-        </span>
-        Client reviews <span>verified and approved before publishing</span>
+      <div>
+        <span class="eyebrow">Client stories</span>
+        <h2 id="reviews-title"><span class="accent">Join the families</span> who plan with confidence.</h2>
+        <div class="reviews__rating" aria-label="Client reviews">
+          <span class="avatars" aria-hidden="true">
+            <span class="avatar">PS</span><span class="avatar avatar--2">DR</span><span class="avatar avatar--3">MG</span><span class="avatar avatar--4">JT</span><span class="avatar avatar--5">AM</span>
+          </span>
+          <span class="reviews__rating-text">
+            <span class="stars" aria-hidden="true">
+              <svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg>
+            </span>
+            <strong>Verified client reviews</strong>
+            <span>Approved by compliance before publishing</span>
+          </span>
+        </div>
       </div>
-    </div>
-
-    <div class="reviews__chips" aria-hidden="true">
-      <span class="reviews__chip" style="left:6%;top:10%">Priya</span>
-      <span class="reviews__chip" style="left:28%;top:55%">Daniel</span>
-      <span class="reviews__chip" style="left:52%;top:20%">Maria</span>
-      <span class="reviews__chip" style="left:74%;top:60%">James</span>
-      <span class="reviews__chip" style="left:90%;top:15%">Ana</span>
+      <div class="reviews__nav">
+        <button class="reviews__arrow" type="button" id="reviews-prev" aria-label="Previous reviews"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+        <button class="reviews__arrow" type="button" id="reviews-next" aria-label="Next reviews"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
     </div>
 
     <div class="reviews__track" id="reviews-track" tabindex="0" aria-label="Client review cards, scroll horizontally">
       <article class="review" data-placeholder>
+        <span class="review__mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
-        <span class="review__name">Priya S.</span>
         <p class="review__quote">We had several accounts and no idea how they fit together. For the first time we have one plan we actually understand.</p>
+        <footer class="review__who">
+          <span class="avatar">PS</span>
+          <span><span class="review__name">Priya S.</span><span class="review__meta">Young family · San Jose</span></span>
+        </footer>
       </article>
       <article class="review" data-placeholder>
+        <span class="review__mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
-        <span class="review__name">Daniel R.</span>
         <p class="review__quote">Patient, well prepared, and never pushy. Our advisor explained every option before we made a decision.</p>
+        <footer class="review__who">
+          <span class="avatar avatar--2">DR</span>
+          <span><span class="review__name">Daniel R.</span><span class="review__meta">Pre-retiree · Santa Clara</span></span>
+        </footer>
       </article>
       <article class="review" data-placeholder>
+        <span class="review__mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
-        <span class="review__name">Maria G.</span>
         <p class="review__quote">As new parents we needed to get protection and college savings sorted. The process felt thoughtful and genuinely focused on us.</p>
+        <footer class="review__who">
+          <span class="avatar avatar--3">MG</span>
+          <span><span class="review__name">Maria G.</span><span class="review__meta">New parents · Sunnyvale</span></span>
+        </footer>
       </article>
       <article class="review" data-placeholder>
+        <span class="review__mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
-        <span class="review__name">James T.</span>
         <p class="review__quote">I was nervous about working with an advisor. They listened first, laid out a roadmap, and now I know exactly what to do next.</p>
+        <footer class="review__who">
+          <span class="avatar avatar--4">JT</span>
+          <span><span class="review__name">James T.</span><span class="review__meta">Tech professional · Mountain View</span></span>
+        </footer>
       </article>
       <article class="review" data-placeholder>
+        <span class="review__mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
-        <span class="review__name">Ana M.</span>
         <p class="review__quote">Years of scattered accounts from different jobs finally make sense. I feel supported, not sold to.</p>
+        <footer class="review__who">
+          <span class="avatar avatar--5">AM</span>
+          <span><span class="review__name">Ana M.</span><span class="review__meta">Business owner · Campbell</span></span>
+        </footer>
       </article>
     </div>
     <div class="reviews__dots" id="reviews-dots" role="tablist" aria-label="Choose review"></div>

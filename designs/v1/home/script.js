@@ -86,6 +86,15 @@
     if (!ticking) { ticking = true; window.requestAnimationFrame(syncDots); }
   }, { passive: true });
 
+  function scrollByCard(dir) {
+    var step = cards[0].offsetWidth + 20;
+    track.scrollBy({ left: step * dir, behavior: 'smooth' });
+  }
+  var prevBtn = document.getElementById('reviews-prev');
+  var nextBtn = document.getElementById('reviews-next');
+  if (prevBtn) prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { scrollByCard(1); });
+
   /* ---------- Sticky CTA: hide while the booking section is on screen ---------- */
   var sticky = document.getElementById('sticky-cta');
   var bookSection = document.getElementById('book');
