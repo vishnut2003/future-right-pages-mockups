@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future Right — Website design mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --dark:#0d141a; --light:#fbf6ee; --cream:#ffeacc; --accent:#f0a030; --cta:#cc6333; --muted:#5b6470; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Outfit",system-ui,sans-serif; background:var(--light); color:var(--dark); line-height:1.5; }
+    .wrap { max-width:1000px; margin:0 auto; padding:64px 24px; }
+    header { display:flex; align-items:center; gap:14px; margin-bottom:40px; }
+    header img { width:56px; height:56px; }
+    h1 { margin:0; font-size:1.75rem; font-weight:600; letter-spacing:-0.02em; }
+    header p { margin:0; color:var(--muted); font-size:.95rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+    .card { background:#fff; border:1px solid rgba(13,20,26,.12); border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit; transition:transform .2s, box-shadow .2s; }
+    .card:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(13,20,26,.08); }
+    .card h2 { margin:0; font-size:1.2rem; font-weight:600; }
+    .card p { margin:0; color:var(--muted); font-size:.95rem; }
+    .meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; padding-top:8px; }
+    .tag { font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:999px; background:var(--cream); }
+    .tag--status { background:var(--dark); color:#fff; }
+    .note { margin-top:40px; font-size:.85rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="assets/logo/futureright-logo.png" alt="">
+      <div>
+        <h1>Future Right — website design mockups</h1>
+        <p>Prepared by WebSpider Solutions. Click a card to open the design. Best viewed in Chrome or Edge, desktop and phone.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="designs/v1/home/index.html">
+        <h2>Home — v1</h2>
+        <p>Facet-style layout with Future Right's colours. Hero, who we help, six services, how it works, advisors, reviews, free guide, FAQs, booking and footer disclosures.</p>
+        <div class="meta">
+          <span class="tag tag--status">Draft</span>
+          <span class="tag">Round 0</span>
+          <span class="tag">4 Nov 2026</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note">Photos, names, reviews and disclosure text in the mockups are placeholders for design review only and will be replaced with Future Right's approved content.</p>
+  </div>
+</body>
+</html>
