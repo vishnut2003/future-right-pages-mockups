@@ -729,9 +729,9 @@ section[id] { scroll-margin-top: 96px; }
   .hero__cta .btn { width: 100%; }
   .who__grid, .services__grid, .advisors__grid { grid-template-columns: 1fr; }
   .who__card img { aspect-ratio: 16 / 9; }
-  .answers__content { padding: 36px 20px 16px; }
+  .answers__content { padding: 36px 20px 36px; }
   .answers__content .btn { width: 100%; }
-  .answers__questions { padding: 0 20px 28px; }
+  .answers__questions { display: none; }
   .review { flex-basis: 85%; min-height: 0; }
   .reviews__nav { display: none; }
   .reviews__rating { flex-wrap: wrap; }
