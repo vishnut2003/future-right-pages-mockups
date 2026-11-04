@@ -117,6 +117,7 @@ section[id] { scroll-margin-top: 96px; }
 .btn .icon { width: 18px; height: 18px; }
 .link {
   display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 500;
+  align-self: flex-start; width: fit-content; max-width: 100%;
   border-bottom: 1px solid transparent; transition: border-color 0.2s;
 }
 .link:hover { border-color: currentColor; }
