@@ -84,9 +84,33 @@
 
 <!-- ============================ HERO ============================ -->
 <section class="hero section--dark" id="top" aria-labelledby="hero-title">
-  <div class="hero__ghost hero__ghost--1"></div>
-  <div class="hero__ghost hero__ghost--2"></div>
-  <div class="hero__ghost hero__ghost--3"></div>
+  <!-- Decorative background layer: glows, dot grid, faint curve and faded photo ghosts. Pointer-events off. -->
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__glow hero__glow--orange"></span>
+    <span class="hero__glow hero__glow--cream"></span>
+    <span class="hero__glow hero__glow--blue"></span>
+    <span class="hero__dots"></span>
+    <svg class="hero__curve" viewBox="0 0 1600 700" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="hero-curve-grad" x1="0" x2="1">
+          <stop offset="0" stop-color="#f0a030" stop-opacity="0"/>
+          <stop offset="0.45" stop-color="#f0a030" stop-opacity="0.22"/>
+          <stop offset="1" stop-color="#f0a030" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M-50 520 C 250 470, 420 300, 700 330 S 1100 480, 1350 300 S 1550 120, 1700 160" fill="none" stroke="url(#hero-curve-grad)" stroke-width="2"/>
+      <path d="M-50 600 C 300 560, 500 420, 800 440 S 1200 560, 1700 380" fill="none" stroke="url(#hero-curve-grad)" stroke-width="1" opacity="0.4"/>
+    </svg>
+    <span class="hero__ghost hero__ghost--1"><img src="img/hero-5.jpg" alt=""></span>
+    <span class="hero__ghost hero__ghost--2"><img src="img/hero-2.jpg" alt=""></span>
+    <span class="hero__ghost hero__ghost--3"><img src="img/hero-3.jpg" alt=""></span>
+    <span class="hero__ghost hero__ghost--4"><img src="img/hero-7.jpg" alt=""></span>
+    <span class="hero__ghost hero__ghost--5"><img src="img/hero-1.jpg" alt=""></span>
+    <span class="hero__ghost hero__ghost--6"><img src="img/hero-6.jpg" alt=""></span>
+    <span class="hero__diamond hero__diamond--1"></span>
+    <span class="hero__diamond hero__diamond--2"></span>
+    <span class="hero__diamond hero__diamond--3"></span>
+  </div>
 
   <div class="container">
     <div class="hero__inner">
