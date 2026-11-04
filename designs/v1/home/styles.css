@@ -292,18 +292,38 @@ section[id] { scroll-margin-top: 96px; }
 /* ---------- Answers photo card ---------- */
 .answers { padding-block: var(--section-y) 0; }
 .answers__card {
-  position: relative; border-radius: var(--r-xl); overflow: hidden; min-height: 520px;
-  background: var(--c-cream-2);
+  position: relative; border-radius: var(--r-xl); overflow: hidden; min-height: 600px;
+  background: var(--c-cream-2); display: flex; align-items: center;
 }
-.answers__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.answers__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
 .answers__card::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(13, 20, 26, 0.55) 0%, rgba(13, 20, 26, 0.05) 55%);
+  background:
+    linear-gradient(90deg, rgba(13, 20, 26, 0.88) 0%, rgba(13, 20, 26, 0.72) 35%, rgba(13, 20, 26, 0.15) 70%, rgba(13, 20, 26, 0.35) 100%),
+    linear-gradient(0deg, rgba(13, 20, 26, 0.55) 0%, rgba(13, 20, 26, 0) 40%);
 }
-.answers__card h2 {
-  position: relative; z-index: 1; color: var(--c-white); text-align: center;
-  max-width: 640px; margin-inline: auto; padding: 56px var(--gutter) 0;
+.answers__content {
+  position: relative; z-index: 1; color: var(--c-white); max-width: 520px;
+  padding: 64px 56px; display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem;
 }
+.answers__content h2 { color: var(--c-white); }
+.answers__content p { color: var(--c-text-muted-dark); max-width: 440px; }
+.answers__content .btn { margin-top: 0.5rem; }
+.answers__questions {
+  position: absolute; z-index: 1; right: 40px; bottom: 36px; max-width: 520px;
+  display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px;
+}
+.answers__questions li {
+  background: var(--c-light); color: var(--c-dark); padding: 0.55rem 1rem; border-radius: var(--r-pill);
+  font-size: 0.9375rem; font-weight: 500; box-shadow: 0 10px 24px rgba(13, 20, 26, 0.25);
+  animation: hero-float var(--q-dur, 16s) linear var(--q-delay, 0s) infinite;
+}
+.answers__questions li:nth-child(1) { --q-dur: 15s; --q-delay: -3s; }
+.answers__questions li:nth-child(2) { --q-dur: 18s; --q-delay: -9s; }
+.answers__questions li:nth-child(3) { --q-dur: 16s; --q-delay: -5s; }
+.answers__questions li:nth-child(4) { --q-dur: 19s; --q-delay: -12s; }
+.answers__questions li:nth-child(5) { --q-dur: 17s; --q-delay: -1s; }
+.answers__questions li:nth-child(6) { --q-dur: 20s; --q-delay: -7s; background: var(--c-accent); }
 
 /* ---------- Services ---------- */
 .services__head { max-width: 720px; margin-inline: auto; text-align: center; }
@@ -523,7 +543,12 @@ section[id] { scroll-margin-top: 96px; }
   .who__grid, .services__grid, .advisors__grid { grid-template-columns: repeat(2, 1fr); }
   .how__steps { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem; }
   .how__curve { display: none; }
-  .answers__card { min-height: 420px; }
+  .answers__card { min-height: 0; flex-direction: column; align-items: stretch; }
+  .answers__card::after { background: linear-gradient(180deg, rgba(13, 20, 26, 0.85) 0%, rgba(13, 20, 26, 0.7) 60%, rgba(13, 20, 26, 0.85) 100%); }
+  .answers__content { padding: 48px 32px 24px; max-width: none; }
+  .answers__questions { position: relative; right: auto; bottom: auto; max-width: none; justify-content: flex-start; padding: 12px 32px 40px; }
+  .answers__questions li { animation: none; background: rgba(255, 255, 255, 0.1); color: var(--c-white); border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: none; }
+  .answers__questions li:nth-child(6) { background: var(--c-accent); color: var(--c-dark); border-color: var(--c-accent); }
   .booking { grid-template-columns: 1fr; }
   .booking__cal { border-right: 0; border-bottom: 1px solid var(--c-line-light); }
   .footer__top { grid-template-columns: repeat(2, 1fr); }
@@ -541,8 +566,9 @@ section[id] { scroll-margin-top: 96px; }
   .hero__cta .btn { width: 100%; }
   .who__grid, .services__grid, .advisors__grid { grid-template-columns: 1fr; }
   .who__card img { aspect-ratio: 16 / 9; }
-  .answers__card { min-height: 360px; }
-  .answers__card h2 { padding-top: 32px; }
+  .answers__content { padding: 36px 20px 16px; }
+  .answers__content .btn { width: 100%; }
+  .answers__questions { padding: 0 20px 28px; }
   .review { flex-basis: 85%; }
   .guide__side { display: none; }
   .guide__form { flex-direction: column; align-items: stretch; }
