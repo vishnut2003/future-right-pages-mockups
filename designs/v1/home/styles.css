@@ -193,10 +193,15 @@ section[id] { scroll-margin-top: 96px; }
 
 /* Hero background layer (decorative only) */
 .hero__bg { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+/* Fade the whole background layer (glows, dots, ghosts, curves and the hero tint) into the flat dark of the next section */
+.hero__bg::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 320px;
+  background: linear-gradient(180deg, rgba(13, 20, 26, 0) 0%, rgba(13, 20, 26, 0.6) 55%, var(--c-dark) 100%);
+}
 .hero__glow { position: absolute; border-radius: 50%; filter: blur(60px); }
 .hero__glow--orange { width: 640px; height: 640px; right: -160px; top: -200px; background: radial-gradient(circle, rgba(240, 160, 48, 0.22) 0%, rgba(240, 160, 48, 0) 65%); }
 .hero__glow--cream { width: 560px; height: 560px; left: -200px; top: 120px; background: radial-gradient(circle, rgba(255, 234, 204, 0.12) 0%, rgba(255, 234, 204, 0) 65%); }
-.hero__glow--blue { width: 520px; height: 520px; left: 40%; bottom: -260px; background: radial-gradient(circle, rgba(59, 127, 224, 0.14) 0%, rgba(59, 127, 224, 0) 65%); }
+.hero__glow--blue { width: 520px; height: 520px; left: 40%; bottom: -120px; background: radial-gradient(circle, rgba(59, 127, 224, 0.12) 0%, rgba(59, 127, 224, 0) 65%); }
 .hero__dots {
   position: absolute; inset: 0;
   background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1.5px);
@@ -260,7 +265,7 @@ section[id] { scroll-margin-top: 96px; }
 }
 
 /* ---------- Trust strip ---------- */
-.trust { padding: 0 0 var(--section-y); }
+.trust { padding: 0 0 64px; }
 .trust__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 900px; margin-inline: auto; }
 .trust__badge { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; text-align: center; }
 .trust__laurel { width: 96px; height: 56px; }
@@ -269,7 +274,7 @@ section[id] { scroll-margin-top: 96px; }
 .trust .micro { text-align: center; margin-top: 2rem; }
 
 /* ---------- Who we help ---------- */
-.who { background: linear-gradient(180deg, var(--c-dark) 0%, #101a22 100%); }
+.who { background: linear-gradient(180deg, var(--c-dark) 0%, #101a22 100%); padding-top: 80px; }
 .who__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3.5rem; }
 .who__card {
   background: var(--c-dark-3); border-radius: var(--r-card); overflow: hidden;
