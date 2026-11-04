@@ -54,7 +54,13 @@
       <span>Future Right<small>Financials</small></span>
     </a>
 
+    <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
     <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+      <div class="nav__drawer-head">
+        <span class="nav__drawer-brand"><img src="img/logo.png" alt="">Future Right</span>
+        <button class="nav__drawer-close" type="button" id="nav-close" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <span class="nav__drawer-eyebrow eyebrow">Menu</span>
       <div class="nav__dropdown">
         <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-menu">
           Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
@@ -72,6 +78,12 @@
       <a href="#how-it-works">How It Works</a>
       <a href="#faq">Learning Center</a>
       <a href="#join">Join Our Team</a>
+      <div class="nav__drawer-foot">
+        <a class="btn btn--cta" href="#book">Book a free consultation</a>
+        <a class="nav__drawer-contact" href="tel:+16692458382"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+1 (669) 245-8382</a>
+        <a class="nav__drawer-contact" href="mailto:futureright.fin@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>futureright.fin@gmail.com</a>
+        <span class="nav__drawer-meta">San Jose, CA · Serving the Bay Area</span>
+      </div>
     </nav>
 
     <div class="nav__actions">
@@ -595,22 +607,49 @@
 
     <!-- PLACEHOLDER: static mock of the booking-calendar embed (Calendly or similar) that the live site will use. -->
     <div class="booking" aria-label="Booking calendar preview">
-      <div class="booking__cal">
+      <div class="booking__cal" id="booking-cal">
         <div class="booking__cal-head">
-          <span><svg class="icon" aria-hidden="true" style="vertical-align:-3px;margin-right:6px"><use href="#i-calendar"/></svg>November 2026</span>
-          <span>Free consultation · 20 min</span>
+          <div class="booking__month">
+            <button class="booking__month-btn" type="button" id="cal-prev" aria-label="Previous month"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <span id="cal-label" aria-live="polite"><svg class="icon" aria-hidden="true" style="vertical-align:-3px;margin-right:6px"><use href="#i-calendar"/></svg>November 2026</span>
+            <button class="booking__month-btn" type="button" id="cal-next" aria-label="Next month"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <span class="booking__type">Free consultation · 20 min</span>
         </div>
-        <div class="booking__days" aria-hidden="true">
+
+        <div class="booking__days" id="cal-days" role="grid" aria-label="Choose a day">
           <span class="dow">Mon</span><span class="dow">Tue</span><span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span><span class="dow">Sun</span>
-          <span></span><span></span><span></span><span></span><span></span><span></span><span>1</span>
-          <span>2</span><span>3</span><span>4</span><span class="avail">5</span><span class="avail">6</span><span>7</span><span>8</span>
-          <span class="avail">9</span><span class="sel">10</span><span class="avail">11</span><span class="avail">12</span><span class="avail">13</span><span>14</span><span>15</span>
-          <span class="avail">16</span><span class="avail">17</span><span class="avail">18</span><span class="avail">19</span><span class="avail">20</span><span>21</span><span>22</span>
-          <span class="avail">23</span><span class="avail">24</span><span class="avail">25</span><span>26</span><span>27</span><span>28</span><span>29</span>
-          <span class="avail">30</span>
         </div>
-        <div class="booking__slots" aria-hidden="true">
-          <span>9:00 am</span><span>10:30 am</span><span class="sel">1:00 pm</span><span>2:30 pm</span><span>4:00 pm</span><span>5:30 pm</span>
+
+        <div class="booking__step" id="cal-step-time" hidden>
+          <p class="booking__label">Pick a time on <strong id="cal-day-label"></strong> <span class="booking__tz">(Pacific Time)</span></p>
+          <div class="booking__slots" id="cal-slots" role="group" aria-label="Choose a time"></div>
+        </div>
+
+        <form class="booking__form" id="cal-form" hidden novalidate>
+          <p class="booking__label">You're booking <strong id="cal-summary"></strong></p>
+          <div class="booking__fields">
+            <label class="sr-only" for="cal-name">Your name</label>
+            <input type="text" id="cal-name" name="name" placeholder="Your name" required autocomplete="name">
+            <label class="sr-only" for="cal-email">Email address</label>
+            <input type="email" id="cal-email" name="email" placeholder="Email address" required autocomplete="email">
+          </div>
+          <div class="booking__actions">
+            <button class="btn btn--cta" type="submit">Confirm free consultation</button>
+            <button class="booking__back" type="button" id="cal-change">Change time</button>
+          </div>
+          <p class="micro">Demo only. In the live site this connects to the booking tool and sends a confirmation email.</p>
+        </form>
+
+        <div class="booking__done" id="cal-done" hidden role="status">
+          <span class="booking__check"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <h3>You're booked<span class="accent">.</span></h3>
+          <p id="cal-done-text"></p>
+          <p class="booking__done-sub">We've sent the details to <strong id="cal-done-email"></strong>. Your advisor will call you at the time you chose.</p>
+          <div class="booking__actions">
+            <a class="btn btn--dark btn--sm" href="#top">Back to top</a>
+            <button class="booking__back" type="button" id="cal-reset">Book another time</button>
+          </div>
         </div>
       </div>
       <div class="booking__info">
