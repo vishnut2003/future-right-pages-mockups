@@ -32,6 +32,9 @@
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
   <symbol id="i-percent" viewBox="0 0 24 24"><path d="M5 19L19 5"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></symbol>
   <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H6a2 2 0 0 1-2-2z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
   <symbol id="i-laurel" viewBox="0 0 96 56">
     <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
       <path d="M30 50c-9-4-16-12-18-24"/><path d="M66 50c9-4 16-12 18-24"/>
@@ -241,11 +244,11 @@
       <p class="lead">Every service connects to the others, so you get one plan that fits together, not six separate conversations.</p>
     </div>
 
-    <div class="chips services__chips" aria-label="How we work">
-      <span class="chip">Personalised plans</span>
-      <span class="chip">Plain-language advice</span>
-      <span class="chip">Family first</span>
-    </div>
+    <ul class="chips chips--center services__chips" aria-label="How we work">
+      <li class="chip chip--feature"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Personalised plans</li>
+      <li class="chip chip--feature"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>Plain-language advice</li>
+      <li class="chip chip--feature"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>Family first</li>
+    </ul>
 
     <div class="services__grid">
       <article class="service">
