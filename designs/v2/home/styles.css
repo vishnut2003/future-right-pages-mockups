@@ -220,9 +220,13 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
 .video-toggle--left { right: auto; left: 20px; }
 
 /* ---------- Hero ---------- */
+/* The hero fills the first screen. Type and spacing scale with the screen height so the whole
+   hero, badges included, stays above the fold. The cap stops it growing on very tall screens. */
 .hero {
+  --hero-gap: clamp(0.85rem, 2.6vh, 1.5rem);
   position: relative; isolation: isolate; overflow: hidden; display: grid; align-items: center;
-  min-height: clamp(660px, 56vw, 840px); padding: 128px 0 72px; text-align: center; background: var(--c-ink);
+  min-height: min(100vh, 1080px); min-height: min(100svh, 1080px);
+  padding: 92px 0 36px; text-align: center; background: var(--c-ink);
 }
 .hero__media video { object-position: center 62%; }
 .hero__media::after {
@@ -232,11 +236,11 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
 }
 .hero__inner { display: flex; flex-direction: column; align-items: center; }
 .hero__kicker { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
-.hero h1 { margin-top: 1.25rem; }
-.hero__lead { margin-top: 1.5rem; max-width: 580px; font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem); line-height: 1.5; }
-.hero__cta { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; margin-top: 2.25rem; width: 100%; }
+.hero h1 { margin-top: calc(var(--hero-gap) * 0.85); font-size: clamp(2.5rem, min(1.5rem + 4.4vw, 9.6vh), 5rem); }
+.hero__lead { margin-top: var(--hero-gap); max-width: 660px; font-size: clamp(1.0625rem, min(1rem + 0.35vw, 2.5vh), 1.25rem); line-height: 1.5; }
+.hero__cta { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; margin-top: calc(var(--hero-gap) * 1.4); width: 100%; }
 .hero__cta .link { font-size: var(--fs-small); }
-.hero__badges { display: flex; justify-content: center; gap: clamp(1rem, 4vw, 3.5rem); margin-top: 3rem; }
+.hero__badges { display: flex; justify-content: center; gap: clamp(1rem, 4vw, 3.5rem); margin-top: calc(var(--hero-gap) * 1.9); }
 .hero__badge { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; min-width: 0; }
 .hero__laurel { width: 88px; height: 52px; opacity: 0.9; }
 .hero__badge strong { font-weight: 600; font-size: 1rem; line-height: 1.2; }
@@ -590,15 +594,18 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
   .nav__actions .btn { display: none; }
   .nav__brand small { display: none; }
 
-  .hero { min-height: 0; padding: 116px 0 56px; }
+  .hero { padding: 84px 0 96px; }
+  .hero h1 { font-size: clamp(2rem, 10vw, 2.75rem); }
+  .hero__lead { font-size: 1rem; }
+  .hero__cta { position: relative; }
   .hero__kicker { font-size: 0.8125rem; }
   .hero__cta .btn--wide { width: 100%; }
-  .hero__badges { gap: 0.75rem; width: 100%; margin-top: 2.25rem; }
+  .hero__badges { gap: 0.75rem; width: 100%; }
   .hero__badge { flex: 1 1 0; }
   .hero__laurel { width: 68px; height: 40px; }
   .hero__badge strong { font-size: 0.875rem; }
   .hero__badge span { font-size: var(--fs-micro); }
-  .video-toggle { bottom: 12px; }
+  .video-toggle--hero { right: 0; bottom: -9px; width: 40px; height: 40px; }
 
   .stories__nav { display: none; }
   .stories__track { gap: 12px; padding-top: 1.75rem; }
@@ -650,6 +657,15 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
   .sticky-cta { display: flex; }
   body { padding-bottom: 84px; }
   .footer { margin-bottom: -84px; padding-bottom: 124px; }
+}
+
+/* ---------- Responsive: short phone screens (keep the hero inside the first screen) ---------- */
+@media (max-width: 767px) and (max-height: 700px) {
+  .hero { --hero-gap: 0.7rem; }
+  .hero__badge span { display: none; }
+}
+@media (max-width: 767px) and (max-height: 620px) {
+  .hero__badges { display: none; }
 }
 
 /* ---------- Motion preferences ---------- */

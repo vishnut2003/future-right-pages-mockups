@@ -74,6 +74,15 @@ not edited. Ask the client for mark-only and white source files.
   file.
 - Drawer, footer and guide cover: orange mark on a white tile.
 
+**Hero fills the first screen (user request 2026-11-05).** The hero is exactly one screen tall (`100svh`, capped at
+1080px), and its headline size and spacing scale with the screen height so the headline, button and three badges all
+sit above the fold. Checked from 1920x910 down to 1280x600 on desktop and 430x780 down to 320x568 on phones.
+- On phones the hero leaves room for the sticky bar, and the video pause button sits beside "See how it works".
+- On short phone screens the badge sub-lines are hidden (under 700px tall) and then the badges (under 620px tall).
+- The hero kicker is a plain line of spaced capitals, not a pill with a dot.
+- Screenshots: capture at a real screen size (for example 1440x900 or 375x667, full page). In a very tall capture
+  window the hero stretches to its 1080px cap, which is not what a visitor sees.
+
 **Left out from v1.** Photo collage, glows and dot grid, stats marquee, diamond ornaments, floating question chips,
 the separate trust strip (its badges moved into the hero).
 
