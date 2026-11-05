@@ -131,6 +131,8 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
 .btn--cta:hover { background: var(--c-amber-hover); }
 .btn--dark { background: var(--c-ink); color: var(--c-paper); }
 .btn--dark:hover { background: var(--c-ink-3); }
+.btn--light { background: var(--c-paper); color: var(--c-ink); }
+.btn--light:hover { background: var(--c-cream); }
 .btn--outline { border: 1.5px solid var(--c-ink); color: var(--c-ink); }
 .btn--outline:hover { background: var(--c-ink); color: var(--c-paper); }
 .btn--ghost { background: rgba(var(--white-rgb), 0.1); color: var(--c-paper); border: 1px solid var(--c-line-dark); }
@@ -439,12 +441,24 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
 .faq__link { color: var(--c-burnt); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Join Our Team teaser ---------- */
-.join { padding-block: 56px; background: var(--c-paper-2); border-block: 1px solid var(--c-line); }
-.join__row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem 2rem; flex-wrap: wrap; }
-.join__row > div { display: flex; flex-direction: column; gap: 0.5rem; }
-.join__tag { width: fit-content; padding: 0.3rem 0.75rem; border: 1.5px solid var(--c-ink); border-radius: 6px; font-size: var(--fs-micro); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
-.join h2 { font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem); letter-spacing: -0.02em; }
-.join p { color: var(--c-muted); max-width: 560px; }
+.join { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(72px, 7vw, 112px); background: var(--c-ink); }
+.join__media { position: absolute; inset: 0; z-index: -1; }
+.join__media img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 35%; }
+.join__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(var(--ink-rgb), 0.94) 0%, rgba(var(--ink-rgb), 0.82) 38%, rgba(var(--ink-rgb), 0.45) 72%, rgba(var(--ink-rgb), 0.35) 100%);
+}
+.join__inner { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; max-width: 620px; }
+.join__tag { padding: 0.35rem 0.8rem; border: 1.5px solid rgba(var(--white-rgb), 0.7); border-radius: 6px; font-size: var(--fs-micro); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.join h2 { font-size: var(--fs-h2-sm); }
+.join p { max-width: 520px; font-size: 1.125rem; color: var(--c-muted-dark); }
+.join__points { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.join__points li {
+  display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem 0.45rem 0.7rem; border-radius: var(--r-pill);
+  font-size: var(--fs-small); font-weight: 500; background: rgba(var(--white-rgb), 0.1); border: 1px solid var(--c-line-dark);
+}
+.join__points .icon { width: 16px; height: 16px; color: var(--c-amber); stroke-width: 2.4; }
+.join .btn { margin-top: 0.5rem; }
 
 /* ---------- Booking ---------- */
 .booking {
@@ -550,7 +564,8 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
   }
   .nav--open .nav__menu { transform: none; visibility: visible; transition: transform 0.4s var(--ease), visibility 0s; }
   .nav__drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.75rem; }
-  .nav__drawer-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.125rem; }
+  .nav__drawer-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+  .nav__drawer-brand small { display: block; margin-top: 4px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.8; }
   .nav__drawer-close { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--c-line-dark); transition: background-color 0.2s, color 0.2s; }
   .nav__drawer-close:hover { background: var(--c-amber); color: var(--c-ink); }
   .nav__drawer-close .icon { width: 20px; height: 20px; }
@@ -600,7 +615,6 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
   .btn { min-height: 52px; }
   .nav__bar { padding-block: 12px; }
   .nav__actions .btn { display: none; }
-  .nav__brand small { display: none; }
 
   .hero { padding: 84px 0 96px; }
   .hero h1 { font-size: clamp(2rem, 10vw, 2.75rem); }
@@ -650,7 +664,8 @@ section[id], .faq__item[id] { scroll-margin-top: 92px; }
   .guide__form input { flex: none; }
 
   .faq__q { padding: 1.15rem 0; }
-  .join__row .btn { width: 100%; }
+  .join__media::after { background: rgba(var(--ink-rgb), 0.8); }
+  .join .btn { width: 100%; }
 
   .booking { margin-top: 2.25rem; }
   .booking__cal, .booking__info { padding: 1.25rem; }

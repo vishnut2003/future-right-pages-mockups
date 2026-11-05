@@ -89,6 +89,11 @@ sit above the fold. Checked from 1920x910 down to 1280x600 on desktop and 430x78
 **Service and advisor cards (user request 2026-11-05).** No border; soft grey background `#f5f3ef` on the white
 section. Service cards lift with a soft shadow on hover.
 
+**Join Our Team band (user request 2026-11-05).** Full-width photo with a dark overlay, white text, three topic
+chips (Training, Mentorship, What to expect) and a white button. The chips name what the careers page covers and
+make no claims. Photo: `img/join-team.jpg`, cropped from Pexels photo 7648017, "Professionals Having a Discussion"
+(Pexels Licence, free to use, no attribution required). Placeholder until Future Right supplies a team photo.
+
 **Left out from v1.** Photo collage, glows and dot grid, stats marquee, diamond ornaments, floating question chips,
 the separate trust strip (its badges moved into the hero).
 
@@ -97,8 +102,8 @@ the separate trust strip (its badges moved into the hero).
 client review" label; hero badge claims; disclosure paragraphs; office hours; booking-calendar mock.
 
 **Compliance choices.** Same as v1: no credentials asserted, no returns, guarantees or income figures. The Join Our
-Team band has its own tag, outline button and soft background, and its button stays on that band until the recruiting
-page exists, so it never leads into the client booking flow.
+Team band has its own squared tag and a white button (client CTAs are amber), and its button stays on that band until
+the recruiting page exists, so it never leads into the client booking flow.
 
 **Links.** As v1: pages that don't exist yet point to the matching in-page section. The four question cards open the
 matching FAQ answer.

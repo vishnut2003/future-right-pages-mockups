@@ -59,7 +59,7 @@
     <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
     <nav class="nav__menu" id="nav-menu" aria-label="Primary">
       <div class="nav__drawer-head">
-        <span class="nav__drawer-brand"><span class="nav__logo"><img src="img/logo.png" alt=""></span>Future Right</span>
+        <span class="nav__drawer-brand"><span class="nav__logo"><img src="img/logo.png" alt=""></span><span>Future Right<small>Financials</small></span></span>
         <button class="nav__drawer-close" type="button" id="nav-close" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
       </div>
       <span class="nav__drawer-eyebrow eyebrow">Menu</span>
@@ -538,14 +538,21 @@
 </section>
 
 <!-- Join Our Team teaser: recruiting journey, kept visually separate. No income claims. -->
-<section class="join" id="join" aria-labelledby="join-title">
-  <div class="container join__row">
-    <div>
+<!-- PLACEHOLDER PHOTO: licensed stock (Pexels). Replace with a real Future Right team photo if supplied. -->
+<section class="join on-dark" id="join" aria-labelledby="join-title">
+  <div class="join__media" aria-hidden="true"><img src="img/join-team.jpg" alt="" loading="lazy"></div>
+  <div class="container">
+    <div class="join__inner">
       <span class="join__tag">Careers · Join Our Team</span>
-      <h2 id="join-title">Thinking about a career in financial services?</h2>
+      <h2 id="join-title">Thinking about a career <span class="accent">in financial services?</span></h2>
       <p>Learn about training, mentorship and what to expect when you work with Future Right.</p>
+      <ul class="join__points" aria-label="What the careers page covers">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Training</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mentorship</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>What to expect</li>
+      </ul>
+      <a class="btn btn--light" href="#join">Explore Join Our Team <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-    <a class="btn btn--outline" href="#join">Explore Join Our Team <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
