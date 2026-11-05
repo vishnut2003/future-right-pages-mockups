@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future Right — A clear plan for the people you love | Home v2</title>
+  <meta name="description" content="Design mockup, Home page v2. Future Right Financial Solutions: personal financial planning for families, professionals, business owners and pre-retirees in San Jose and the Bay Area.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+
+<!-- Icon sprite (inline so the page works offline) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/><path d="M12 3v3M4.2 6.2l2.1 2.1M3 13h3M18 13h3M17.7 6.2l-2.1 2.1M3 20h18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v4c0 1.5 3 3 6 3s6-1.5 6-3v-4M22 9v5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+  <symbol id="i-percent" viewBox="0 0 24 24"><path d="M5 19L19 5"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 5-7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H6a2 2 0 0 1-2-2z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2.8l2.3 1.7 2.9-.1.8 2.8 2.3 1.7-1 2.7 1 2.7-2.3 1.7-.8 2.8-2.9-.1L12 20.4l-2.3-1.7-2.9.1-.8-2.8-2.3-1.7 1-2.7-1-2.7L6 7.2l.8-2.8 2.9.1z"/><path d="M8.8 11.8l2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5.5v13M15.5 5.5v13"/></symbol>
+  <symbol id="i-laurel" viewBox="0 0 96 56">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M30 50c-9-4-16-12-18-24"/><path d="M66 50c9-4 16-12 18-24"/>
+      <path d="M14 26c-4-2-6-6-5-10 4 1 6 4 5 10zM17 34c-4 0-7-3-8-7 4 0 7 3 8 7zM23 42c-4 1-8-1-10-5 4-1 7 1 10 5zM31 48c-4 2-8 1-11-2 3-2 7-1 11 2z"/>
+      <path d="M82 26c4-2 6-6 5-10-4 1-6 4-5 10zM79 34c4 0 7-3 8-7-4 0-7 3-8 7zM73 42c4 1 8-1 10-5-4-1-7 1-10 5zM65 48c4 2 8 1 11-2-3-2-7-1-11 2z"/>
+    </g>
+    <path fill="currentColor" d="M48 8l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L48 21.3l-5.4 2.9 1.2-5.9-4.4-4.1 6-.7z"/>
+  </symbol>
+</svg>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <a class="nav__brand" href="index.html" aria-label="Future Right Financials, home">
+      <span class="nav__logo"><img src="img/logo.png" alt=""></span>
+      <span>Future Right<small>Financials</small></span>
+    </a>
+
+    <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+    <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+      <div class="nav__drawer-head">
+        <span class="nav__drawer-brand"><span class="nav__logo"><img src="img/logo.png" alt=""></span>Future Right</span>
+        <button class="nav__drawer-close" type="button" id="nav-close" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <span class="nav__drawer-eyebrow eyebrow">Menu</span>
+      <div class="nav__dropdown">
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-menu">
+          Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+        </button>
+        <div class="nav__dropdown-panel" id="services-menu">
+          <a href="#services">Retirement Planning</a>
+          <a href="#services">Life &amp; Family Protection</a>
+          <a href="#services">Kids Education Funding</a>
+          <a href="#services">Estate Planning: Will &amp; Trust</a>
+          <a href="#services">Tax-Smart Savings</a>
+          <a href="#services">Investment Planning</a>
+        </div>
+      </div>
+      <a href="#who-we-help">Who We Help</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#faq">Learning Center</a>
+      <a href="#join">Join Our Team</a>
+      <div class="nav__drawer-foot">
+        <a class="btn btn--cta" href="#book">Book a free consultation</a>
+        <a class="nav__drawer-contact" href="tel:+16692458382"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+1 (669) 245-8382</a>
+        <a class="nav__drawer-contact" href="mailto:futureright.fin@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>futureright.fin@gmail.com</a>
+        <span class="nav__drawer-meta">San Jose, CA · Serving the Bay Area</span>
+      </div>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--cta btn--sm" href="#book">Book a free consultation</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<!-- PLACEHOLDER VIDEO: licensed stock footage (Pexels). Replace with client-approved footage if supplied. -->
+<section class="hero on-dark" id="top" aria-labelledby="hero-title">
+  <div class="hero__media" aria-hidden="true">
+    <video class="js-bg-video" id="hero-video" muted loop playsinline preload="metadata" poster="video/hero-poster.jpg">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="container hero__inner">
+    <p class="hero__kicker">Bay Area financial planning</p>
+    <h1 id="hero-title">A clear plan for<br><span class="accent">the people you love.</span></h1>
+    <p class="hero__lead">Protect your family, save for the big moments and plan your retirement with one advisor who explains everything in plain language.</p>
+    <div class="hero__cta">
+      <a class="btn btn--cta btn--wide" href="#book">Book a free consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="link" href="#how-it-works">See how it works <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <!-- PLACEHOLDER CLAIMS: neutral until credentials and licence details are supplied by the client. -->
+    <ul class="hero__badges" aria-label="Why families choose Future Right">
+      <li class="hero__badge">
+        <svg class="hero__laurel" aria-hidden="true"><use href="#i-laurel"/></svg>
+        <strong>Licensed advisors</strong><span>Details on every profile</span>
+      </li>
+      <li class="hero__badge">
+        <svg class="hero__laurel" aria-hidden="true"><use href="#i-laurel"/></svg>
+        <strong>Bay Area based</strong><span>San Jose and beyond</span>
+      </li>
+      <li class="hero__badge">
+        <svg class="hero__laurel" aria-hidden="true"><use href="#i-laurel"/></svg>
+        <strong>Free first call</strong><span>No commitment</span>
+      </li>
+    </ul>
+  </div>
+
+  <button class="video-toggle" type="button" data-video="hero-video" aria-label="Pause background video" hidden>
+    <svg class="icon video-toggle__pause" aria-hidden="true"><use href="#i-pause"/></svg>
+    <svg class="icon video-toggle__play" aria-hidden="true"><use href="#i-play"/></svg>
+  </button>
+</section>
+
+<!-- Client stories -->
+<!-- PLACEHOLDER REVIEWS: sample text and photo for design only. Replace with compliance-approved client reviews or remove. -->
+<section class="stories section" id="reviews" aria-labelledby="stories-title">
+  <div class="container">
+    <div class="stories__head">
+      <div>
+        <span class="eyebrow">Client stories</span>
+        <h2 id="stories-title">Families who planned ahead, <span class="accent">in their own words.</span></h2>
+      </div>
+      <div class="stories__nav">
+        <button class="round-btn" type="button" id="reviews-prev" aria-label="Previous reviews"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+        <button class="round-btn" type="button" id="reviews-next" aria-label="Next reviews"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="stories__track" id="reviews-track" tabindex="0" aria-label="Client review cards, scroll horizontally">
+    <article class="review review--featured" data-placeholder>
+      <div class="review__photo">
+        <img src="img/story-featured.jpg" alt="Placeholder photo of a parent at home with two young children">
+        <div class="review__photo-text">
+          <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+          <span class="review__name">Priya S.</span>
+          <span class="review__meta">Young family · San Jose</span>
+        </div>
+      </div>
+      <p class="review__quote">&ldquo;We had several accounts and no idea how they fit together. For the first time we have one plan we actually understand.&rdquo;</p>
+    </article>
+
+    <article class="review" data-placeholder>
+      <div class="review__source"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg>Verified client review</div>
+      <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+      <p class="review__quote">&ldquo;Patient, well prepared and never pushy. Every option was explained before we decided.&rdquo;</p>
+      <footer class="review__who"><span class="review__name">Daniel R.</span><span class="review__meta">Pre-retiree · Santa Clara</span></footer>
+    </article>
+
+    <article class="review" data-placeholder>
+      <div class="review__source"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg>Verified client review</div>
+      <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+      <p class="review__quote">&ldquo;As new parents we needed protection and college savings sorted. It felt thoughtful and focused on us.&rdquo;</p>
+      <footer class="review__who"><span class="review__name">Maria G.</span><span class="review__meta">New parents · Sunnyvale</span></footer>
+    </article>
+
+    <article class="review" data-placeholder>
+      <div class="review__source"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg>Verified client review</div>
+      <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+      <p class="review__quote">&ldquo;I was nervous about working with an advisor. They listened first, and now I know what to do next.&rdquo;</p>
+      <footer class="review__who"><span class="review__name">James T.</span><span class="review__meta">Tech professional · Mountain View</span></footer>
+    </article>
+
+    <article class="review" data-placeholder>
+      <div class="review__source"><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg>Verified client review</div>
+      <span class="stars" aria-hidden="true"><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg><svg class="icon icon--fill"><use href="#i-star"/></svg></span>
+      <p class="review__quote">&ldquo;Years of scattered accounts from different jobs finally make sense. I feel supported, not sold to.&rdquo;</p>
+      <footer class="review__who"><span class="review__name">Ana M.</span><span class="review__meta">Business owner · Campbell</span></footer>
+    </article>
+  </div>
+
+  <div class="container">
+    <div class="stories__dots" id="reviews-dots" role="tablist" aria-label="Choose review"></div>
+    <p class="micro stories__note">Sample reviews shown for design purposes only. The live site will show only reviews that Future Right's compliance contact has approved, with the required disclosures. Testimonials are individual opinions and not a guarantee of a similar outcome.</p>
+  </div>
+</section>
+
+<!-- Who we help -->
+<section class="who section section--soft" id="who-we-help" aria-labelledby="who-title">
+  <div class="container who__grid">
+    <div class="who__intro">
+      <span class="eyebrow">Who we help</span>
+      <h2 id="who-title">Planning that fits <span class="accent">where you are in life.</span></h2>
+      <p class="lead">Your questions change as your life does. We work with people at four common stages, and build each plan around the goals in front of you now.</p>
+      <a class="btn btn--dark" href="#book">Book a free consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <ul class="who__list">
+      <li class="who__item">
+        <img src="img/audience-families.jpg" alt="A parent laughing while carrying two young children on their shoulders" loading="lazy">
+        <div>
+          <h3>Young families</h3>
+          <p>Protect the people who depend on you, start saving for college and get the basics in place without the jargon.</p>
+          <a class="link link--accent" href="#services">Family planning <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+      <li class="who__item">
+        <img src="img/audience-professionals.jpg" alt="A group of professionals working together on laptops" loading="lazy">
+        <div>
+          <h3>Tech professionals</h3>
+          <p>Make sense of equity, bonuses and benefits, and put a strong income to work for your long-term goals.</p>
+          <a class="link link--accent" href="#services">Planning for professionals <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+      <li class="who__item">
+        <img src="img/audience-business.jpg" alt="Two business partners celebrating at a desk" loading="lazy">
+        <div>
+          <h3>Business owners</h3>
+          <p>Separate personal and business finances, protect what you've built and plan for life beyond the business.</p>
+          <a class="link link--accent" href="#services">Planning for owners <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+      <li class="who__item">
+        <img src="img/audience-preretirees.jpg" alt="A professional in glasses standing by a window" loading="lazy">
+        <div>
+          <h3>Pre-retirees</h3>
+          <p>Understand when you could retire, how your income might work and how to pass on what you've worked for.</p>
+          <a class="link link--accent" href="#services">Retirement planning <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="head head--center">
+      <span class="eyebrow">What we do</span>
+      <h2 id="services-title">Six services, <span class="accent">one joined-up plan.</span></h2>
+      <p class="lead">Each area connects to the others, so your protection, savings and retirement decisions work together.</p>
+    </div>
+
+    <div class="services__grid">
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div>
+        <h3><a href="#book">Retirement Planning</a></h3>
+        <p>Work out what you'll need, when you could stop working and how your income might be structured.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <h3><a href="#book">Life &amp; Family Protection</a></h3>
+        <p>Cover that fits your family and budget, so the people who depend on you are looked after.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></div>
+        <h3><a href="#book">Kids Education Funding</a></h3>
+        <p>Start early, use the right accounts and give your children options without derailing your own goals.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></div>
+        <h3><a href="#book">Estate Planning: Will &amp; Trust</a></h3>
+        <p>Understand the difference between a will and a trust, and make your wishes clear and workable.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-percent"/></svg></div>
+        <h3><a href="#book">Tax-Smart Savings</a></h3>
+        <p>Learn how tax-advantaged accounts work and where they could fit into your wider plan.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+      <article class="service">
+        <div class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div>
+        <h3><a href="#book">Investment Planning</a></h3>
+        <p>An approach matched to your goals and your comfort with risk, explained in plain English.</p>
+        <span class="service__more">Learn more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </article>
+    </div>
+
+    <p class="micro services__note">Future Right Financial Solutions LLC provides financial planning and insurance-based solutions. Services vary by individual needs. Nothing on this page is investment, legal or tax advice.</p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how section on-dark" id="how-it-works" aria-labelledby="how-title">
+  <div class="container how__grid">
+    <div class="how__media">
+      <img src="img/how-it-works.jpg" alt="An advisor and a client talking through a plan at a table" loading="lazy">
+      <div class="how__card is-active" data-step-card="0">
+        <span class="how__card-step">Step 1 of 3</span>
+        <strong>Free consultation · 20 minutes</strong>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>By phone or video</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Bring any question</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No cost, no obligation</li>
+        </ul>
+      </div>
+      <div class="how__card" data-step-card="1">
+        <span class="how__card-step">Step 2 of 3</span>
+        <strong>Your personalised plan</strong>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Protection for your family</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Savings and education goals</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Retirement and estate basics</li>
+        </ul>
+      </div>
+      <div class="how__card" data-step-card="2">
+        <span class="how__card-step">Step 3 of 3</span>
+        <strong>Clear next steps</strong>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Actions in a sensible order</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Help with the paperwork</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Regular check-ins</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="how__text">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">From first call to a working plan, <span class="accent">in three steps.</span></h2>
+
+      <ol class="steps" id="steps">
+        <li class="step is-active">
+          <span class="step__bar" aria-hidden="true"><span class="step__fill"></span></span>
+          <button class="step__btn" type="button" aria-pressed="true">
+            <span class="step__num">1/3</span>
+            <span class="step__title">Book a free call</span>
+            <span class="step__text">A real conversation about your life, your family and what you want your money to do.</span>
+          </button>
+        </li>
+        <li class="step">
+          <span class="step__bar" aria-hidden="true"><span class="step__fill"></span></span>
+          <button class="step__btn" type="button" aria-pressed="false">
+            <span class="step__num">2/3</span>
+            <span class="step__title">Get your personalised plan</span>
+            <span class="step__text">A written roadmap built around your goals, in plain language, that adapts as things change.</span>
+          </button>
+        </li>
+        <li class="step">
+          <span class="step__bar" aria-hidden="true"><span class="step__fill"></span></span>
+          <button class="step__btn" type="button" aria-pressed="false">
+            <span class="step__num">3/3</span>
+            <span class="step__title">Put it into action</span>
+            <span class="step__text">Simple next steps, help with the paperwork and regular check-ins so the plan keeps moving.</span>
+          </button>
+        </li>
+      </ol>
+
+      <a class="btn btn--cta" href="#book">Book a free consultation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="micro">Every plan is personal. These steps describe our typical process; timing varies with each family's needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Money questions -->
+<!-- PLACEHOLDER VIDEO: licensed stock footage (Pexels). Replace with client-approved footage if supplied. -->
+<section class="begin section" aria-labelledby="begin-title">
+  <div class="container">
+    <div class="begin__card on-dark">
+      <div class="begin__media" aria-hidden="true">
+        <video class="js-bg-video" id="begin-video" muted loop playsinline preload="none" poster="video/begin-poster.jpg">
+          <source src="video/begin.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="begin__text">
+        <h2 id="begin-title">Start with the question <span class="accent">on your mind.</span></h2>
+        <p>Most people come to us with one thing they want answered. That is a good place to begin.</p>
+      </div>
+
+      <ul class="begin__questions" aria-label="Common questions">
+        <li><a class="qcard" href="#q-life"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>How much life cover does my family need?</span><svg class="icon qcard__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a class="qcard" href="#q-estate"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><span>Do we need a will or a trust?</span><svg class="icon qcard__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a class="qcard" href="#q-start"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><span>Do I need a lot of savings to start?</span><svg class="icon qcard__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a class="qcard" href="#how-it-works"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>How does working with an advisor work?</span><svg class="icon qcard__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
+
+      <button class="video-toggle video-toggle--left" type="button" data-video="begin-video" aria-label="Pause background video" hidden>
+        <svg class="icon video-toggle__pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <svg class="icon video-toggle__play" aria-hidden="true"><use href="#i-play"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Advisors -->
+<!-- PLACEHOLDER: names, roles, photos and credentials to be supplied by the client (MoU section 10). -->
+<section class="advisors section section--flush-top" id="advisors" aria-labelledby="advisors-title">
+  <div class="container">
+    <div class="head head--split">
+      <div>
+        <span class="eyebrow">Your advisors</span>
+        <h2 id="advisors-title">Real people, <span class="accent">not a call centre.</span></h2>
+      </div>
+      <p class="lead">You work with the same advisor from the first call onwards: someone who knows your family, explains your options and stays with you as life changes.</p>
+    </div>
+
+    <div class="advisors__grid">
+      <article class="advisor">
+        <img src="img/advisor-1.jpg" alt="Placeholder portrait of an advisor" loading="lazy">
+        <div class="advisor__body">
+          <h3>Advisor name</h3>
+          <span class="advisor__role">Founder &amp; Financial Advisor</span>
+          <span class="advisor__cred">Credentials and licence details as provided</span>
+          <a class="link link--accent" href="#book">Book with this advisor <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="advisor">
+        <img src="img/advisor-2.jpg" alt="Placeholder portrait of an advisor" loading="lazy">
+        <div class="advisor__body">
+          <h3>Advisor name</h3>
+          <span class="advisor__role">Financial Advisor</span>
+          <span class="advisor__cred">Credentials and licence details as provided</span>
+          <a class="link link--accent" href="#book">Book with this advisor <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="advisor">
+        <img src="img/advisor-3.jpg" alt="Placeholder portrait of an advisor" loading="lazy">
+        <div class="advisor__body">
+          <h3>Advisor name</h3>
+          <span class="advisor__role">Financial Advisor</span>
+          <span class="advisor__cred">Credentials and licence details as provided</span>
+          <a class="link link--accent" href="#book">Book with this advisor <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="micro advisors__note">Placeholder names and photos. Advisor details, photos and licence lookup links come from Future Right.</p>
+  </div>
+</section>
+
+<!-- Free guide -->
+<section class="guide section section--flush-top" id="guide" aria-labelledby="guide-title">
+  <div class="container">
+    <div class="guide__card">
+      <div class="guide__text">
+        <span class="eyebrow">Free guide</span>
+        <h2 id="guide-title">The Family Financial Checklist, <span class="accent">yours free.</span></h2>
+        <p class="lead">Twelve things every household should have in place, from protection to paperwork. Short, practical and written in plain language.</p>
+        <form class="guide__form" id="guide-form" novalidate>
+          <label class="sr-only" for="guide-email">Email address</label>
+          <input type="email" id="guide-email" name="email" placeholder="Your email address" required autocomplete="email">
+          <button class="btn btn--cta" type="submit">Get the free checklist</button>
+        </form>
+        <p class="guide__done" id="guide-done" role="status">Thanks! On the live site the checklist would arrive in your inbox in a moment.</p>
+        <p class="micro">We'll only email you about the guide and occasional planning tips. Unsubscribe any time.</p>
+      </div>
+
+      <div class="guide__art" aria-hidden="true">
+        <div class="guide__sheet">
+          <strong>What's inside</strong>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Emergency fund basics</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Life cover check</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>College savings options</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Will and beneficiaries</li>
+          </ul>
+        </div>
+        <div class="guide__cover">
+          <span class="nav__logo"><img src="img/logo.png" alt=""></span>
+          <div>
+            <span class="guide__cover-tag">Free guide</span>
+            <strong>The Family Financial Checklist</strong>
+            <span>12 things to have in place</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq section section--flush-top" id="faq" aria-labelledby="faq-title">
+  <div class="container faq__grid">
+    <div class="faq__intro">
+      <span class="eyebrow">FAQs</span>
+      <h2 id="faq-title">Good questions, <span class="accent">straight answers.</span></h2>
+      <p class="lead">What people usually want to know before they book.</p>
+      <a class="link link--accent" href="tel:+16692458382"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Prefer to ask in person? +1 (669) 245-8382</a>
+    </div>
+
+    <div class="faq__list" id="faq-list">
+      <div class="faq__item">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">Is the first consultation really free?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p>Yes. The first call is a conversation about your situation and goals. There is no fee and no obligation to continue.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">Who do you typically work with?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Young families, working professionals, business owners and people approaching retirement, mostly in San Jose and the wider Bay Area.</p></div></div>
+      </div>
+      <div class="faq__item" id="q-start">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">Do I need a lot of savings to get started?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>No. Many families come to us to get the basics right: protection, a savings habit and a plan for the next few years. Starting early usually matters more than starting big.</p></div></div>
+      </div>
+      <div class="faq__item" id="q-life">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">How much life cover does my family need?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>It depends on your income, debts, children and the cover you already have. Our <a class="faq__link" href="#book">Life Insurance Needs Calculator</a> gives an educational starting estimate in a couple of minutes, and an advisor can then check it against your full picture.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">What happens after the first call?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>If it's a good fit, we gather a few details, build your personalised plan and walk you through it. You decide what to act on and when, and we check in regularly.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">What are your advisors' qualifications?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-6" role="region" aria-labelledby="faq-6-btn"><div><p>Each advisor's licences and credentials are listed on their profile page, with links to public lookup tools where available, so you can verify them yourself.</p></div></div>
+      </div>
+      <div class="faq__item" id="q-estate">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-btn">Can you help with wills, trusts and taxes?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-7" role="region" aria-labelledby="faq-7-btn"><div><p>We help you understand your options and how they fit into your overall plan. For legal documents and tax filing we recommend working with a licensed attorney or CPA, and we're happy to coordinate with them.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-8" id="faq-8-btn">How do I book?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <div class="faq__a" id="faq-8" role="region" aria-labelledby="faq-8-btn"><div><p>Pick a time in the booking calendar below, call us on +1 (669) 245-8382, or send a message and we'll get back to you within one working day.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Join Our Team teaser: recruiting journey, kept visually separate. No income claims. -->
+<section class="join" id="join" aria-labelledby="join-title">
+  <div class="container join__row">
+    <div>
+      <span class="join__tag">Careers · Join Our Team</span>
+      <h2 id="join-title">Thinking about a career in financial services?</h2>
+      <p>Learn about training, mentorship and what to expect when you work with Future Right.</p>
+    </div>
+    <a class="btn btn--outline" href="#join">Explore Join Our Team <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="book section" id="book" aria-labelledby="book-title">
+  <div class="container">
+    <div class="head head--center">
+      <span class="eyebrow">Book a free consultation</span>
+      <h2 id="book-title">Twenty minutes, <span class="accent">no commitment.</span></h2>
+      <p class="lead">Choose a time that suits you. Your advisor will call to talk through your situation and answer your questions.</p>
+    </div>
+
+    <!-- PLACEHOLDER: working mock of the booking-calendar embed (Calendly or similar) that the live site will use. -->
+    <div class="booking" aria-label="Booking calendar preview">
+      <div class="booking__cal" id="booking-cal">
+        <div class="booking__cal-head">
+          <div class="booking__month">
+            <button class="booking__month-btn" type="button" id="cal-prev" aria-label="Previous month"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <span id="cal-label" aria-live="polite">November 2026</span>
+            <button class="booking__month-btn" type="button" id="cal-next" aria-label="Next month"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <span class="booking__type">Free consultation · 20 min</span>
+        </div>
+
+        <div class="booking__days" id="cal-days" role="grid" aria-label="Choose a day">
+          <span class="dow">Mon</span><span class="dow">Tue</span><span class="dow">Wed</span><span class="dow">Thu</span><span class="dow">Fri</span><span class="dow">Sat</span><span class="dow">Sun</span>
+        </div>
+
+        <div class="booking__step" id="cal-step-time" hidden>
+          <p class="booking__label">Pick a time on <strong id="cal-day-label"></strong> <span class="booking__tz">(Pacific Time)</span></p>
+          <div class="booking__slots" id="cal-slots" role="group" aria-label="Choose a time"></div>
+        </div>
+
+        <form class="booking__form" id="cal-form" hidden novalidate>
+          <p class="booking__label">You're booking <strong id="cal-summary"></strong></p>
+          <div class="booking__fields">
+            <label class="sr-only" for="cal-name">Your name</label>
+            <input type="text" id="cal-name" name="name" placeholder="Your name" required autocomplete="name">
+            <label class="sr-only" for="cal-email">Email address</label>
+            <input type="email" id="cal-email" name="email" placeholder="Email address" required autocomplete="email">
+          </div>
+          <div class="booking__actions">
+            <button class="btn btn--cta" type="submit">Confirm free consultation</button>
+            <button class="booking__back" type="button" id="cal-change">Change time</button>
+          </div>
+          <p class="micro">Demo only. On the live site this connects to the booking tool and sends a confirmation email.</p>
+        </form>
+
+        <div class="booking__done" id="cal-done" hidden role="status">
+          <span class="booking__check"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <h3>You're booked.</h3>
+          <p id="cal-done-text"></p>
+          <p class="booking__done-sub">We've sent the details to <strong id="cal-done-email"></strong>. Your advisor will call you at the time you chose.</p>
+          <div class="booking__actions">
+            <a class="btn btn--dark btn--sm" href="#top">Back to top</a>
+            <button class="booking__back" type="button" id="cal-reset">Book another time</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking__info">
+        <h3>Prefer to talk first?</h3>
+        <p>Call, email or message us and we'll find a time that works for you.</p>
+        <ul class="booking__contact">
+          <li><a href="tel:+16692458382"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+1 (669) 245-8382</a></li>
+          <li><a href="mailto:futureright.fin@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>futureright.fin@gmail.com</a></li>
+          <li><span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>San Jose, CA · Serving the Bay Area</span></li>
+          <li><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Mon–Sat, 9am–6pm PT</span></li>
+        </ul>
+        <p class="micro">Office address, hours and booking tool to be confirmed by Future Right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer on-dark" id="disclosures">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="nav__logo"><img src="img/logo.png" alt=""></span>
+          <span>Future Right<small>Financials</small></span>
+        </div>
+        <p>Personal financial planning for families, professionals, business owners and pre-retirees in San Jose and the Bay Area.</p>
+        <a class="btn btn--cta btn--sm" href="#book">Book a free consultation</a>
+      </div>
+
+      <div class="footer__col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services">Retirement Planning</a></li>
+          <li><a href="#services">Life &amp; Family Protection</a></li>
+          <li><a href="#services">Kids Education Funding</a></li>
+          <li><a href="#services">Estate Planning</a></li>
+          <li><a href="#services">Tax-Smart Savings</a></li>
+          <li><a href="#services">Investment Planning</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#advisors">About Us</a></li>
+          <li><a href="#who-we-help">Who We Help</a></li>
+          <li><a href="#faq">Learning Center</a></li>
+          <li><a href="#join">Join Our Team</a></li>
+          <li><a href="#book">Contact &amp; Book</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+16692458382">+1 (669) 245-8382</a></li>
+          <li><a href="mailto:futureright.fin@gmail.com">futureright.fin@gmail.com</a></li>
+          <li>San Jose, CA</li>
+          <li><a href="https://www.facebook.com/profile.php?id=61570980683953" rel="noopener" target="_blank">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/lipsa-rath-173aa3245/" rel="noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#disclosures">Disclosures</a></li>
+          <li><a href="#disclosures">Privacy Policy</a></li>
+          <li><a href="#disclosures">Terms of Use</a></li>
+          <li><a href="#disclosures">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__disclosures">
+      <p class="placeholder">[Disclosure text to be provided or approved by Future Right's compliance contact. The paragraphs below show the intended length and placement only.]</p>
+      <p>Future Right Financial Solutions LLC provides financial planning and insurance-based solutions. Products and services are offered through licensed professionals and may vary by state. Licence details are available on each advisor's profile page.</p>
+      <p>The information on this website is for educational purposes only and should not be considered investment, legal or tax advice, or a recommendation of any specific product or strategy. Please consult a licensed attorney or CPA for legal and tax matters.</p>
+      <p>Any testimonials shown are individual experiences, provided voluntarily, and are not a guarantee of future results or a similar outcome. Future Right does not compensate clients for reviews.</p>
+    </div>
+
+    <div class="footer__bottom">
+      <span>San Jose, CA · Serving the Bay Area</span>
+      <span>© Future Right Financial Solutions LLC 2026. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky bar: book a call + click-to-call -->
+<div class="sticky-cta on-dark" id="sticky-cta">
+  <a class="btn btn--ghost" href="tel:+16692458382"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn--cta" href="#book">Book a free call</a>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
