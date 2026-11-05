@@ -22,6 +22,8 @@ headlines.
 - Full-bleed background video hero, centred headline with an italic serif accent line, wide arrow button, three
   laurel badges under the button, transparent header that turns solid on scroll.
 - Client stories directly under the hero: one featured photo card plus review cards in a row that scrolls sideways.
+  On desktop the row can also be dragged with the mouse (open-hand cursor, closed hand while dragging) and glides to
+  the nearest card on release (user request 2026-11-05). Arrows, dots, touch and trackpad scrolling work as before.
 - Split rows: big statement and button on the left, stacked items on the right (Who we help).
 - "How it works" as a 1/3, 2/3, 3/3 stepper beside a media panel. It advances by itself and each step can be clicked.
 - A rounded media card with a headline on the left and question cards on the right (second background video). This
@@ -72,7 +74,8 @@ not edited. Ask the client for mark-only and white source files.
 - Header (user request 2026-11-05): the mark is white with no tile while the header is transparent over the video,
   and switches to full colour when the header turns solid on scroll. The white version is a CSS filter on the same
   file.
-- Drawer, footer and guide cover: orange mark on a white tile.
+- Guide cover, footer and mobile menu drawer (user requests 2026-11-05): the same white mark with no tile, since
+  all three are dark surfaces. The footer brand also uses the header's type sizes.
 
 **Hero fills the first screen (user request 2026-11-05).** The hero is exactly one screen tall (`100svh`, capped at
 1080px), and its headline size and spacing scale with the screen height so the headline, button and three badges all
@@ -82,6 +85,9 @@ sit above the fold. Checked from 1920x910 down to 1280x600 on desktop and 430x78
 - The hero kicker is a plain line of spaced capitals, not a pill with a dot.
 - Screenshots: capture at a real screen size (for example 1440x900 or 375x667, full page). In a very tall capture
   window the hero stretches to its 1080px cap, which is not what a visitor sees.
+
+**Service and advisor cards (user request 2026-11-05).** No border; soft grey background `#f5f3ef` on the white
+section. Service cards lift with a soft shadow on hover.
 
 **Left out from v1.** Photo collage, glows and dot grid, stats marquee, diamond ornaments, floating question chips,
 the separate trust strip (its badges moved into the hero).

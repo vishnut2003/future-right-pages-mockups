@@ -117,6 +117,74 @@
   document.getElementById('reviews-prev').addEventListener('click', function () { scrollByCard(-1); });
   document.getElementById('reviews-next').addEventListener('click', function () { scrollByCard(1); });
 
+  /* Drag to scroll with a mouse (touch and trackpads already scroll natively) */
+  (function () {
+    var DRAG_START = 6;      // px of movement before a press becomes a drag
+    var down = false, dragging = false, startX = 0, startScroll = 0, lastX = 0, lastT = 0, velocity = 0;
+    var settleTimer = null, suppressClick = false;
+
+    function endSettle() {
+      window.clearTimeout(settleTimer);
+      track.classList.remove('is-settling');
+    }
+    function nearestCardLeft(x) {
+      var max = track.scrollWidth - track.clientWidth;
+      var best = 0, bestDist = Infinity;
+      cards.forEach(function (c) {
+        var left = Math.min(cardLeft(c), max);
+        var d = Math.abs(left - x);
+        if (d < bestDist) { bestDist = d; best = left; }
+      });
+      return best;
+    }
+
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      down = true; dragging = false;
+      startX = lastX = e.clientX; lastT = e.timeStamp; velocity = 0;
+      startScroll = track.scrollLeft;
+    });
+    track.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX;
+      if (!dragging) {
+        if (Math.abs(dx) < DRAG_START) return;
+        dragging = true;
+        endSettle();
+        track.classList.add('is-dragging');
+        track.setPointerCapture(e.pointerId);
+        var sel = window.getSelection && window.getSelection();
+        if (sel && sel.removeAllRanges) sel.removeAllRanges();
+      }
+      var dt = e.timeStamp - lastT;
+      if (dt > 0) velocity = 0.7 * velocity + 0.3 * ((e.clientX - lastX) / dt);
+      lastX = e.clientX; lastT = e.timeStamp;
+      track.scrollLeft = startScroll - dx;
+    });
+    function release(e) {
+      if (!down) return;
+      down = false;
+      if (!dragging) return;
+      dragging = false;
+      suppressClick = true;
+      window.setTimeout(function () { suppressClick = false; }, 0);
+      if (track.hasPointerCapture && track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
+      // Glide to the card nearest to where the drag was heading, then switch snapping back on
+      var target = nearestCardLeft(track.scrollLeft - velocity * 160);
+      track.classList.remove('is-dragging');
+      track.classList.add('is-settling');
+      track.scrollTo({ left: target, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      settleTimer = window.setTimeout(endSettle, 700);
+    }
+    track.addEventListener('pointerup', release);
+    track.addEventListener('pointercancel', release);
+    track.addEventListener('scrollend', function () { if (!dragging) endSettle(); });
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    track.addEventListener('click', function (e) {
+      if (suppressClick) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+  })();
+
   /* ---------- How it works: three-step stepper ---------- */
   (function () {
     var section = document.getElementById('how-it-works');
