@@ -2,6 +2,68 @@
 
 Dated record of assumptions and reference-derived choices. Newest first. Update when the client confirms or overrules.
 
+## 2026-11-13 — Home v3 (`designs/v3/home/`)
+
+**Why v3.** The client reviewed v1 and v2 and sent six notes (`notes/note-13-11-26.txt`, logged in
+`feedback/home-r1.md` as MoU round 1). They like v1 overall. The user asked for a v3 built from v1 with the notes
+applied, leaving v1 and v2 untouched. Tokens, fonts and section styling are v1's, unchanged.
+
+**Section order.** Hero, trust strip, **How we're different (new)**, Who we help, Real questions (now video), then
+the rest as v1.
+
+**"How we're different" video (user decision: animated in-page explainer, no MP4).**
+- Reference: pwsplanning.com home page (fetched 2026-11-13). Pattern taken: a dark band, a short centred heading, one
+  inline 16:9 player about a minute long, no autoplay. No copy, colours or media taken.
+- Content follows the client's two slides (`notes/images/image1.png`, `image2.png`), in their wording. Scene 1: five
+  silos (Investments, Tax, Insurance, Retirement, Estate), "Separate advice · Separate timing", the hidden cost.
+  Scene 2: one umbrella, "One coordinated plan", six areas, a line connecting the dots, three closing points. End
+  card with "Book a free consultation" and "Watch again". 48 seconds.
+- **Label change (user decision):** the slide's "Risk Free Retirement Planning" is shown as "Retirement Planning".
+  "Risk free" reads as a guarantee. Flagged to the client.
+- **Service names differ from the MoU.** The slide adds Alternate Investment and Long-Term Care and drops Life &
+  Family Protection. The video uses the slide's six; the services grid keeps the MoU six. Flagged to the client.
+- The slides' navy and gold are not used. The explainer uses v1's tokens (dark, amber accent, burnt orange, cream).
+- Build: HTML text and CSS shapes inside a stage sized in container units, so it scales like a video frame. Each
+  piece is a CSS animation with its own start time; `script.js` holds them paused and sets one clock on all of them,
+  which gives play, pause, seek and replay. It never autoplays and pauses when scrolled off screen.
+- Phones get a portrait cut (2:3) with the silos in a 3+2 grid and the areas in a 3×2 grid, so text stays about
+  10px or larger at 375px wide.
+- Reduced motion: the explainer is left out of the page-wide "no animation" rule because it only moves after the
+  visitor presses play.
+- A hidden text summary sits beside the player for screen readers.
+- It is a preview. The final video needs a voiceover and export, which are outside the MoU.
+
+**Real questions card.** The photo is replaced by v2's background clip (`video/begin.mp4`, Pexels video 8208434,
+Pexels Licence) with a pause/play button top right. v1's layout, copy and floating question chips are kept. The clip
+plays only while on screen; with reduced motion the poster shows until play is pressed.
+
+**Hero photos on phones and tablets.** v1 turned the collage into a flat, still, side-scrolling row below 1024px.
+v3 keeps the staggered layout and the orbit motion at every width. Tablet uses the desktop arrangement in
+percentages. Phones show all seven photos in two offset rows. After the user's review (2026-11-13: "feels very
+congested") the phone tiles were made smaller with wider gaps and more space between the rows.
+
+**New photos (client asked for business executives and older couples).** All from Pexels, Pexels Licence (free to
+use, no attribution required), cropped with Pillow. Placeholders until Future Right supplies its own.
+
+| File | Subject | Pexels photo ID |
+|---|---|---|
+| `img/hero-3.jpg` | Business executive in an office | 7581115 |
+| `img/hero-5.jpg` | Older couple, standing | 23174617 |
+| `img/hero-6.jpg` | Business executive in a suit | 3777557 |
+| `img/hero-7.jpg` | Older couple at a table ("Happy Old Couple Using Mobile Phone Together") | 6975192 |
+| `img/audience-preretirees.jpg` | Older couple on a sofa ("Elderly Couple Embracing While Sitting on a Sofa") | 8871427 |
+
+`hero-1`, `hero-2`, `hero-4` and the other audience and advisor photos are v1's. Pexels terms as for v2: people must
+not be shown in a bad light or as endorsing the firm, so these stay decorative and never sit beside a testimonial.
+
+**Links.** "See how Future Right is different" (Who we help) now points to the new section.
+
+**Checked 2026-11-13.** Screenshots at 1440px and 375px are in `designs/v3/home/screenshots/`; also viewed at 768px,
+500px and 320px. Scripted checks passed for: explainer play, pause, seek, play to end and replay (real-time run);
+explainer frames at seven points with nothing outside the frame at 1440/768/375/320; background video play in view
+and pause button; reduced motion; menu drawer, Services dropdown, FAQ, reviews dots, guide form, booking flow, sticky
+bar; no sideways scroll at 320/375/768/1440; all images and in-page links resolving; hero photos moving on phones.
+
 ## 2026-11-05 — Home v2 (`designs/v2/home/`)
 
 **Why a second direction.** Client message (relayed via Aditya Kumar, 2026-11-05) narrowed the references to two:

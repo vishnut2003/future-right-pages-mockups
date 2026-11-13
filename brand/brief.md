@@ -33,6 +33,18 @@ Two separate journeys that must not be mixed:
 5. Tax-Smart Savings
 6. Investment Planning
 
+**To confirm (2026-11-13):** the client's "one umbrella" slide lists six areas that differ from the list above:
+Financial & College Fund Planning, Alternate Investment, Tax Strategy, Risk Free Retirement Planning, Estate
+Planning, Long-Term Care. The mockups show "Retirement Planning" without "Risk Free" (it reads as a guarantee). Ask
+Future Right which list the site should use.
+
+## Positioning (client note, 2026-11-13)
+
+Financial decisions are usually made in silos: investments, tax, insurance, retirement and estate each get separate
+advice at separate times. Future Right brings every personal financial discussion under one umbrella and connects the
+dots: one coordinated plan, with the client's goals as the shared point of reference. Closing points on the client's
+slide: holistic planning, coordinated timing, one implementation calendar.
+
 ## Calls to action
 
 - Client pages: "Book a free consultation" (sticky "Book a free call" and click-to-call on phones).
@@ -59,6 +71,11 @@ No hype, no guarantees, no returns or income figures.
 - **ethos.com:** "the placement of contents, with background videos, testimonials".
 - Plus what the MoU lists for these two: Facet's hero, 3-step process, team section, sample money questions and footer
   disclosures; Ethos's clean journey, "how it works" and the calculator linked from FAQs.
+
+## Client feedback on the designs (2026-11-13)
+
+- Home v1 "overall looks good". Changes asked for are in `feedback/home-r1.md` and built as Home v3.
+- New reference: **pwsplanning.com**, for a short "how we are different" video (1 minute at most).
 
 ## Compliance
 
